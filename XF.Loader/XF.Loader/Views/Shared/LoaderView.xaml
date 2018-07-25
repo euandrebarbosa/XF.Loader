@@ -22,7 +22,7 @@
                         Color="#607D8B" />
                     <Label 
                         HorizontalTextAlignment="Center"
-                        Text="I'm busy now..."
+                        Text="{Binding LoaderMessage}"
                         TextColor="#000000"
                         XAlign="Center" />
                 </StackLayout>

@@ -14,6 +14,16 @@ namespace XF.Loader.ViewModels
         {
             IsBusy = true;
 
+            LoaderMessage = "Starting...";
+
+            await Task.Delay(3000);
+
+            LoaderMessage = "Almost there...";
+
+            await Task.Delay(3000);
+
+            LoaderMessage = "OK, it's done!";
+
             await Task.Delay(3000);
 
             IsBusy = false;

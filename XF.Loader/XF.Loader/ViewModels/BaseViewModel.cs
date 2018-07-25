@@ -23,6 +23,17 @@ namespace XF.Loader.ViewModels
             }
         }
 
+        private string _loaderMessage;
+        public string LoaderMessage
+        {
+            get => _loaderMessage;
+            set
+            {
+                _loaderMessage = value;
+                OnPropertyChanged();
+            }
+        }
+
         #endregion
     }
 }
