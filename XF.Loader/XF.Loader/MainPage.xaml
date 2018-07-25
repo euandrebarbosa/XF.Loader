@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sharedViews="clr-namespace:XF.Loader.Views.Shared;assembly=XF.Loader"
+             x:Class="XF.Loader.MainPage"
+             Title="MainPage">
+
+    <ContentPage.Content>
+        <Grid 
+            VerticalOptions="FillAndExpand">
+            <StackLayout 
+                    Margin="10,20,10,20"
+                    Spacing="0"
+                    Orientation="Vertical"
+                    VerticalOptions="CenterAndExpand">
+
+                <Button 
+                    Text="Start Loader"
+                    HeightRequest="50"
+                    Command="{Binding StartLoaderCommand}" 
+                    BackgroundColor="#19B5FE"
+                    TextColor="#FFFFFF"/>
+            </StackLayout>
+
+            <sharedViews:LoaderView 
+                IsVisible="{Binding IsBusy}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

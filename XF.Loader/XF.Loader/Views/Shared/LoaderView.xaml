@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF.Loader.Views.Shared.LoaderView">
+    <ContentView.Content>
+        <Grid>
+            <ContentView 
+                IsVisible="{Binding IsBusy}"
+                BackgroundColor="#000000"
+                Opacity="0.1" />
+            <Frame 
+                IsVisible="{Binding IsBusy}"
+                BackgroundColor="#FFFFFF"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <StackLayout>
+                    <ActivityIndicator 
+                        BackgroundColor="Transparent"
+                        IsRunning="{Binding IsBusy}"
+                        IsVisible="{Binding IsBusy}"
+                        VerticalOptions="CenterAndExpand"
+                        Color="#607D8B" />
+                    <Label 
+                        HorizontalTextAlignment="Center"
+                        Text="I'm busy now..."
+                        TextColor="#000000"
+                        XAlign="Center" />
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentView.Content>
+</ContentView>
